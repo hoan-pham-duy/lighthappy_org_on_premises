@@ -12,7 +12,7 @@ pipelines:
       - step:
           name: Lint the node package
           script:
-            - npm install eslint
+            - npm install
             - npx eslint src
           caches:
             - node

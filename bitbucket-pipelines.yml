@@ -1,0 +1,35 @@
+image: node:10.15.3
+pipelines:
+  default:
+    - parallel:
+      - step:
+          name: Build and Test
+          caches:
+            - node
+          script:
+            - npm install
+            - npm test
+      - step:
+          name: Lint the node package
+          script:
+            - npm install eslint
+            - npx eslint src
+          caches:
+            - node
+  branches:
+    master:
+      - parallel:
+        - step:
+            name: Build and Test
+            caches:
+              - node
+            script:
+              - npm install
+              - npm test
+              - npm run build
+            artifacts:
+              - build/**
+        - step:
+            name: Security Scan
+            script:
+              - pipe: atlassian/git-secrets-scan:0.4.3

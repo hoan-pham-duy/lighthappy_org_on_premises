@@ -1,9 +1,14 @@
 import React from 'react'
 
+import './../static/css/styles.css'
+import './../static/css/Homepage.css'
+import './../ui_theme/freelancer/css/bootstrap.min.css'
+import './../ui_theme/freelancer/css/freelancer.css'
+
 class NavBar extends React.Component {
   render () {
     return (
-      <nav className="navbar navbar-default navbar-fixed-top">
+      <nav className="navbar navbar-default">
           <div className="container">
               <div className="navbar-header page-scroll">
                   <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -16,7 +21,7 @@ class NavBar extends React.Component {
               </div>
 
               <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul className="nav navbar-nav navbar-right">
+                  <ul className="nav navbar-right">
                       <li className="hidden">
                           <a href="#page-top"></a>
                       </li>

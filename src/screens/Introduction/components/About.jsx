@@ -1,5 +1,8 @@
 import React from 'react'
-
+import './../static/css/styles.css'
+import './../static/css/Homepage.css'
+import './../ui_theme/freelancer/css/bootstrap.min.css'
+import './../ui_theme/freelancer/css/freelancer.css'
 class About extends React.Component {
   render () {
     return (

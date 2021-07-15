@@ -1,4 +1,8 @@
 import React from 'react'
+import './../static/css/styles.css'
+import './../static/css/Homepage.css'
+import './../ui_theme/freelancer/css/bootstrap.min.css'
+import './../ui_theme/freelancer/css/freelancer.css'
 import PropTypes from 'prop-types'
 
 import PortfolioItemDetailModal from './PortfolioItemDetailModal.jsx'

@@ -1,14 +1,13 @@
 $(function () {
-  $('#contactForm input,#contactForm textarea').jqBootstrapValidation({
+  $(
+    '#contactForm input,#contactForm textarea,#contactForm button'
+  ).jqBootstrapValidation({
     preventSubmit: true,
     submitError: function ($form, event, errors) {
       // additional error messages or events
     },
     submitSuccess: function ($form, event) {
-      // Prevent spam click and default submit behaviour
-      $('#btnSubmit').attr('disabled', true)
-      event.preventDefault()
-
+      event.preventDefault() // prevent default submit behaviour
       // get values from FORM
       const name = $('input#name').val()
       const email = $('input#email').val()
@@ -19,8 +18,10 @@ $(function () {
       if (firstName.indexOf(' ') >= 0) {
         firstName = name.split(' ').slice(0, -1).join(' ')
       }
+      $this = $('#sendMessageButton')
+      $this.prop('disabled', true) // Disable submit button until AJAX call is complete to prevent duplicate messages
       $.ajax({
-        url: '././mail/contact_me.php',
+        url: '/assets/mail/contact_me.php',
         type: 'POST',
         data: {
           name: name,
@@ -30,28 +31,43 @@ $(function () {
         },
         cache: false,
         success: function () {
-          // Enable button & show success message
-          $('#btnSubmit').attr('disabled', false)
+          // Success message
           $('#success').html("<div class='alert alert-success'>")
-          $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+          $('#success > .alert-success')
+            .html(
+              "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;"
+            )
             .append('</button>')
-          $('#success > .alert-success')
-            .append('<strong>Your message has been sent. </strong>')
-          $('#success > .alert-success')
-            .append('</div>')
-
+          $('#success > .alert-success').append(
+            '<strong>Your message has been sent. </strong>'
+          )
+          $('#success > .alert-success').append('</div>')
           // clear all fields
           $('#contactForm').trigger('reset')
         },
         error: function () {
           // Fail message
           $('#success').html("<div class='alert alert-danger'>")
-          $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+          $('#success > .alert-danger')
+            .html(
+              "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;"
+            )
             .append('</button>')
-          $('#success > .alert-danger').append('<strong>Sorry ' + firstName + ', it seems that my mail server is not responding. Please try again later!')
+          $('#success > .alert-danger').append(
+            $('<strong>').text(
+              'Sorry ' +
+                                firstName +
+                                ', it seems that my mail server is not responding. Please try again later!'
+            )
+          )
           $('#success > .alert-danger').append('</div>')
           // clear all fields
           $('#contactForm').trigger('reset')
+        },
+        complete: function () {
+          setTimeout(function () {
+            $this.prop('disabled', false) // Re-enable submit button when AJAX call is complete
+          }, 1000)
         }
       })
     },
@@ -66,7 +82,7 @@ $(function () {
   })
 })
 
-// When clicking on Full hide fail/success boxes
+/* When clicking on Full hide fail/success boxes */
 $('#name').focus(function () {
   $('#success').html('')
 })

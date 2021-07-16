@@ -27,13 +27,6 @@ class About extends React.Component {
                 - DevOps Engineer (CI/CD and Building Infrastructure in AWS)<br />
               </div>
             </div>
-            {/* About Section Button */}
-            <div className='text-center mt-4'>
-              <a className='btn btn-xl btn-outline-light' href='https://startbootstrap.com/theme/freelancer/'>
-                <i className='fas fa-download mr-2' />
-                Free Download!
-              </a>
-            </div>
           </div>
         </section>
       </div>

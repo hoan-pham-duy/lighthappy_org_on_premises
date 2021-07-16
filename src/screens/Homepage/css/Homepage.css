@@ -1,0 +1,29 @@
+.Homepage{
+    background-color: aquamarine;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+    list-style-type: none;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: aquamarine;
+  }
+  
+  li a:hover {
+    background-color: yellow;
+  }

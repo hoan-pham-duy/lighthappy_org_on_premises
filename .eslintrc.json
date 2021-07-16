@@ -29,5 +29,6 @@
         "react": {
           "version": "detect"
         }
-    }    
+    },
+    "ignorePatterns": ["src/screens/Homepage/assets/mail/*.js", "src/screens/Homepage/js/scripts.js"]
 }

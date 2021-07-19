@@ -9,7 +9,7 @@
       "UnauthRoleName": "amplify-happypersonalproject-dev-05855-unauthRole",
       "StackName": "amplify-happypersonalproject-dev-05855",
       "StackId": "arn:aws:cloudformation:ap-southeast-1:536428703888:stack/amplify-happypersonalproject-dev-05855/fec18ab0-e8ba-11eb-9f07-0687727c192e",
-      "AmplifyAppId": "d3k3b89yzvv2ni"
+      "AmplifyAppId": "d3lqnkpb94bjlf"
     }
   },
   "staging": {
@@ -22,7 +22,7 @@
       "UnauthRoleName": "amplify-happypersonalproject-staging-10132-unauthRole",
       "StackName": "amplify-happypersonalproject-staging-10132",
       "StackId": "arn:aws:cloudformation:ap-southeast-1:536428703888:stack/amplify-happypersonalproject-staging-10132/5b112230-e8bb-11eb-8483-0a3568054aa0",
-      "AmplifyAppId": "d3k3b89yzvv2ni"
+      "AmplifyAppId": "d3lqnkpb94bjlf"
     }
   },
   "production": {
@@ -35,7 +35,7 @@
       "UnauthRoleName": "amplify-happypersonalproject-production-10310-unauthRole",
       "StackName": "amplify-happypersonalproject-production-10310",
       "StackId": "arn:aws:cloudformation:ap-southeast-1:536428703888:stack/amplify-happypersonalproject-production-10310/95123960-e8bb-11eb-b50a-02ab63576a78",
-      "AmplifyAppId": "d3k3b89yzvv2ni"
+      "AmplifyAppId": "d3lqnkpb94bjlf"
     }
   },
   "develop": {
@@ -48,7 +48,7 @@
       "UnauthRoleName": "amplify-happypersonalproject-develop-12357-unauthRole",
       "StackName": "amplify-happypersonalproject-develop-12357",
       "StackId": "arn:aws:cloudformation:ap-southeast-1:536428703888:stack/amplify-happypersonalproject-develop-12357/7c5c5bf0-e8be-11eb-b07f-02d308b3d306",
-      "AmplifyAppId": "d3k3b89yzvv2ni"
+      "AmplifyAppId": "d3lqnkpb94bjlf"
     }
   }
 }

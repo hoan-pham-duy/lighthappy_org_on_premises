@@ -37,5 +37,18 @@
       "StackId": "arn:aws:cloudformation:ap-southeast-1:536428703888:stack/amplify-happypersonalproject-production-10310/95123960-e8bb-11eb-b50a-02ab63576a78",
       "AmplifyAppId": "d3k3b89yzvv2ni"
     }
+  },
+  "develop": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-happypersonalproject-develop-12357-authRole",
+      "UnauthRoleArn": "arn:aws:iam::536428703888:role/amplify-happypersonalproject-develop-12357-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::536428703888:role/amplify-happypersonalproject-develop-12357-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-happypersonalproject-develop-12357-deployment",
+      "UnauthRoleName": "amplify-happypersonalproject-develop-12357-unauthRole",
+      "StackName": "amplify-happypersonalproject-develop-12357",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:536428703888:stack/amplify-happypersonalproject-develop-12357/7c5c5bf0-e8be-11eb-b07f-02d308b3d306",
+      "AmplifyAppId": "d3k3b89yzvv2ni"
+    }
   }
 }

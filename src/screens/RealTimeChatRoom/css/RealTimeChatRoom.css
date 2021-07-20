@@ -1,0 +1,24 @@
+.RealTimeChatRoom{
+    background-color: rgb(197, 224, 247);
+}
+
+.Header{
+    background-color: rgb(69, 131, 110);
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.MessageAndSend{
+    padding: 50px;
+    background-color: rgb(69, 131, 110);
+    align-items: center;
+    text-align: center;
+}
+
+#BackToHomePage{
+    position: absolute;
+    display: block;
+    padding: 20px;
+    background-color: rgb(165, 65, 65);
+}

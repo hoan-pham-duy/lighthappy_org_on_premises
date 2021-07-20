@@ -49,6 +49,11 @@
       "StackName": "amplify-happypersonalproject-develop-12357",
       "StackId": "arn:aws:cloudformation:ap-southeast-1:536428703888:stack/amplify-happypersonalproject-develop-12357/7c5c5bf0-e8be-11eb-b07f-02d308b3d306",
       "AmplifyAppId": "d3lqnkpb94bjlf"
+    },
+    "categories": {
+      "auth": {
+        "happypersonalproject2503a8fc": {}
+      }
     }
   }
 }

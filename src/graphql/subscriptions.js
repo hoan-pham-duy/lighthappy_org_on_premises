@@ -34,3 +34,39 @@ export const onDeleteTodo = /* GraphQL */ `
     }
   }
 `;
+export const onCreateChatRoom = /* GraphQL */ `
+  subscription OnCreateChatRoom {
+    onCreateChatRoom {
+      id
+      room_name
+      user_name
+      message
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateChatRoom = /* GraphQL */ `
+  subscription OnUpdateChatRoom {
+    onUpdateChatRoom {
+      id
+      room_name
+      user_name
+      message
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteChatRoom = /* GraphQL */ `
+  subscription OnDeleteChatRoom {
+    onDeleteChatRoom {
+      id
+      room_name
+      user_name
+      message
+      createdAt
+      updatedAt
+    }
+  }
+`;

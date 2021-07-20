@@ -25,7 +25,8 @@ pipelines:
               - node
             script:
               - npm install
-              - npm test
+              - export CI=1
+              - npm run test
               - npm run build
             artifacts:
               - build/**

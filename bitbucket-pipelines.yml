@@ -8,8 +8,7 @@ pipelines:
             - node
           script:
             - npm install
-            - export CI=1
-            - npm run test
+            - npm test
       - step:
           name: Lint the node package
           script:
@@ -26,8 +25,7 @@ pipelines:
               - node
             script:
               - npm install
-              - export CI=1
-              - npm run test
+              - npm test
               - npm run build
             artifacts:
               - build/**

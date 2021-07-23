@@ -30,16 +30,14 @@ class RealTimeChatRoom extends Component {
   }
 
   async handleButtonClick (event) {
-    console.log('Button is clicked')
     const userName = await this.getUserEmail()
-    console.log('userName = ', userName)
     const item = {
       room_name: ROOM_NAME_DEFAULT,
       user_name: userName,
-      message: this.state.messageToSend
+      content: this.state.messageToSend
     }
     console.log('item = ', item)
-    API.graphql(graphqlOperation(mutations.createChatRoom, { input: item }))
+    API.graphql(graphqlOperation(mutations.createMessage, { input: item }))
       .then(d => console.log('message created :', d))
       .catch(err => {
         if (err.errors[0].data.id === this.id) {
@@ -52,9 +50,9 @@ class RealTimeChatRoom extends Component {
 
   async loadAllMessages () {
     const messageAll = []
-    const models = await API.graphql(graphqlOperation(queries.chatRoomsByDateCreated, { room_name: ROOM_NAME_DEFAULT, limit: 10, sortDirection: 'ASC' }))
+    const models = await API.graphql(graphqlOperation(queries.messagesByDateCreated, { room_name: ROOM_NAME_DEFAULT, limit: 10, sortDirection: 'ASC' }))
     console.log('models = ', models)
-    const items = models.data.ChatRoomsByDateCreated.items
+    const items = models.data.MessagesByDateCreated.items
     for (const item of items) {
       messageAll.push(item)
     }
@@ -76,17 +74,16 @@ class RealTimeChatRoom extends Component {
     messageToSend: [],
     messageAll: [],
     currentUserName: USER_NAME_DEFAULT
-
   }
 
   async componentDidMount () {
     console.log('componentDidMount in RealTimeChatRoom is running')
     this.loadAllMessages()
-    API.graphql(graphqlOperation(subscriptions.onCreateChatRoom))
+    API.graphql(graphqlOperation(subscriptions.onCreateMessage))
       .subscribe({
         next: (event) => {
           console.log('New item is created')
-          const item = event.value.data.onCreateChatRoom
+          const item = event.value.data.onCreateMessage
           const updatedMessageAll = this.state.messageAll.concat(item)
           this.setState({ messageAll: updatedMessageAll })
         }
@@ -98,13 +95,12 @@ class RealTimeChatRoom extends Component {
       <div className="RealTimeChatRoom">
         <AmplifySignOut />
         <h1 className="Header">Realtime ChatRoom</h1>
+        <h2 className="Greeting"> Hi, {this.state.currentUserName}</h2>
         <ChatRoomTemplate messageAll={this.state.messageAll} userId={this.state.currentUserName} />
-        {/* <TextArea data={this.state.messageAll} /> */}
         <div className="MessageAndSend">
           <input display="block" placeholder="Enter Message Here" onChange={this.handleInputChange}></input>
           <button onClick={this.handleButtonClick} id="SendAMessage"> Send A Message </button>
         </div>
-        {/* <button onClick={this.handleClickGetMessage}> Get All Message</button> */}
         <button onClick={history.goBack} id="BackToHomePage" > Back To Homepage</button>
       </div>
     )

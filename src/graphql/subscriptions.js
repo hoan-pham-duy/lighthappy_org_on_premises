@@ -34,37 +34,37 @@ export const onDeleteTodo = /* GraphQL */ `
     }
   }
 `;
-export const onCreateChatRoom = /* GraphQL */ `
-  subscription OnCreateChatRoom {
-    onCreateChatRoom {
+export const onCreateMessage = /* GraphQL */ `
+  subscription OnCreateMessage {
+    onCreateMessage {
       id
       room_name
       user_name
-      message
+      content
       createdAt
       updatedAt
     }
   }
 `;
-export const onUpdateChatRoom = /* GraphQL */ `
-  subscription OnUpdateChatRoom {
-    onUpdateChatRoom {
+export const onUpdateMessage = /* GraphQL */ `
+  subscription OnUpdateMessage {
+    onUpdateMessage {
       id
       room_name
       user_name
-      message
+      content
       createdAt
       updatedAt
     }
   }
 `;
-export const onDeleteChatRoom = /* GraphQL */ `
-  subscription OnDeleteChatRoom {
-    onDeleteChatRoom {
+export const onDeleteMessage = /* GraphQL */ `
+  subscription OnDeleteMessage {
+    onDeleteMessage {
       id
       room_name
       user_name
-      message
+      content
       createdAt
       updatedAt
     }

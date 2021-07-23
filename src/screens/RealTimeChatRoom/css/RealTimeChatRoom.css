@@ -9,6 +9,12 @@
     padding: 50px;
 }
 
+.Greeting {
+    background-color: rgb(69, 131, 110);
+    color: white;
+    text-align: center;
+    padding: 20px;    
+}
 .MessageAndSend{
     padding: 50px;
     background-color: rgb(69, 131, 110);

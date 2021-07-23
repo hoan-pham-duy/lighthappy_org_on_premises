@@ -30,30 +30,30 @@ export const listTodos = /* GraphQL */ `
     }
   }
 `;
-export const getChatRoom = /* GraphQL */ `
-  query GetChatRoom($id: ID!) {
-    getChatRoom(id: $id) {
+export const getMessage = /* GraphQL */ `
+  query GetMessage($id: ID!) {
+    getMessage(id: $id) {
       id
       room_name
       user_name
-      message
+      content
       createdAt
       updatedAt
     }
   }
 `;
-export const listChatRooms = /* GraphQL */ `
-  query ListChatRooms(
-    $filter: ModelChatRoomFilterInput
+export const listMessages = /* GraphQL */ `
+  query ListMessages(
+    $filter: ModelMessageFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listChatRooms(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listMessages(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         room_name
         user_name
-        message
+        content
         createdAt
         updatedAt
       }
@@ -61,16 +61,16 @@ export const listChatRooms = /* GraphQL */ `
     }
   }
 `;
-export const chatRoomsByDateCreated = /* GraphQL */ `
-  query ChatRoomsByDateCreated(
+export const messagesByDateCreated = /* GraphQL */ `
+  query MessagesByDateCreated(
     $room_name: String
     $createdAt: ModelStringKeyConditionInput
     $sortDirection: ModelSortDirection
-    $filter: ModelChatRoomFilterInput
+    $filter: ModelMessageFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    ChatRoomsByDateCreated(
+    MessagesByDateCreated(
       room_name: $room_name
       createdAt: $createdAt
       sortDirection: $sortDirection
@@ -82,7 +82,7 @@ export const chatRoomsByDateCreated = /* GraphQL */ `
         id
         room_name
         user_name
-        message
+        content
         createdAt
         updatedAt
       }

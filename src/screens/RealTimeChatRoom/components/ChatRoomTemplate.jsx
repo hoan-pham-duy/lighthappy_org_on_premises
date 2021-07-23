@@ -2,50 +2,27 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import './ChatRoom.css'
-// import useChat from '../useChat'
-function convertToDisplayMessage (messageAllRemote, userId) {
+
+function convertToDisplayMessage (remoteMessages, userId) {
   const messages = []
-  for (const messageRemote of messageAllRemote) {
-    console.log('messageRemote = ', messageRemote)
-    console.log('userId = ', userId)
+  for (const remoteMessage of remoteMessages) {
     const message = {}
-    if (messageRemote.user_name === userId) {
+    if (remoteMessage.user_name === userId) {
       message.ownedByCurrentUser = true
-      console.log('message.ownedByCurrentUser = ', message.ownedByCurrentUser)
     }
-    message.body = messageRemote.user_name + ':\t\t\t' + messageRemote.message
+    message.body = remoteMessage.user_name + ':\t\t\t' + remoteMessage.content
     messages.push(message)
   }
   return messages
 }
 const ChatRoomTemplate = (props) => {
-  console.log('props of ChatRoomTemplate = ', props)
-  // const { roomId } = props.match.params
-  // const { messages, sendMessage } = useChat(roomId)
-  const messageAllRemote = props.messageAll
-  console.log('messageAllRemote = ', messageAllRemote)
-  // const roomId = 'default'
-  // const messages = [{ 'ownedByCurrentUser': true, 'body': 'helo from current user' },
-  // { 'ownedByCurrentUser': false, 'body': 'helo from other user' },
-  // { 'ownedByCurrentUser': false, 'body': 'helo from other user2' }]
-  const messages = convertToDisplayMessage(messageAllRemote, props.userId)
+  const remoteMessages = props.messageAll
+  console.log('remoteMessages = ', remoteMessages)
+  const messages = convertToDisplayMessage(remoteMessages, props.userId)
   console.log('message = ', messages)
-
-  // const sendMessage = 'zz'
-  // const [newMessage, setNewMessage] = React.useState('')
-
-  // const handleNewMessageChange = (event) => {
-  //   setNewMessage(event.target.value)
-  // }
-
-  // const handleSendMessage = () => {
-  //   sendMessage(newMessage)
-  //   setNewMessage('')
-  // }
 
   return (
     <div className='chat-room-container'>
-      {/* <h1 className='room-name'>Room: {roomId}</h1> */}
       <div className='messages-container'>
         <ol className='messages-list'>
           {messages.map((message, i) => (

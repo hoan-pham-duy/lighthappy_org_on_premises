@@ -15,11 +15,10 @@ function convertToDisplayMessage (remoteMessages, userId) {
   }
   return messages
 }
+
 const ChatRoomTemplate = (props) => {
   const remoteMessages = props.messageAll
-  console.log('remoteMessages = ', remoteMessages)
   const messages = convertToDisplayMessage(remoteMessages, props.userId)
-  console.log('message = ', messages)
 
   return (
     <div className='chat-room-container'>

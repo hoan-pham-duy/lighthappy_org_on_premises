@@ -32,7 +32,7 @@ export default class FilesUploadComponent extends Component {
     for (const key of Object.keys(this.state.imgCollection)) {
       formData.append(key, this.state.imgCollection[key])
     }
-    axios.post('https://zxagaeoti5.execute-api.ap-southeast-1.amazonaws.com/dev/mergepdf', formData, { responseType: 'arraybuffer', mode: 'cors' })
+    axios.post('https://udg00xc92l.execute-api.ap-southeast-1.amazonaws.com/production/mergepdf', formData, { responseType: 'arraybuffer', mode: 'cors' })
       .then(response => {
         console.log('respose from axios = ', response)
         const blob = new Blob([response.data], { type: 'application/pdf' })

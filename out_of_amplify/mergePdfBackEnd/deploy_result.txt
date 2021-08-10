@@ -1,0 +1,16 @@
+Important! A new version of Zappa is available!
+Upgrade with: pip install zappa --upgrade
+Visit the project page on GitHub to see the latest changes: https://github.com/Miserlou/Zappa
+Calling update for stage production..
+Downloading and installing dependencies..
+ - markupsafe==2.0.1: Downloading
+Packaging project as zip.
+Uploading mergepdf-production-1628526759.zip (5.6MiB)..
+Updating Lambda function code..
+Updating Lambda function configuration..
+Uploading mergepdf-production-template-1628526775.json (1.6KiB)..
+Deploying API Gateway..
+Scheduling..
+Unscheduled mergepdf-production-zappa-keep-warm-handler.keep_warm_callback.
+Scheduled mergepdf-production-zappa-keep-warm-handler.keep_warm_callback with expression rate(4 minutes)!
+Your updated Zappa deployment is live!: https://udg00xc92l.execute-api.ap-southeast-1.amazonaws.com/production

@@ -1,0 +1,5 @@
+Flask
+zappa
+flask_cors
+troposphere<3
+Werkzeug

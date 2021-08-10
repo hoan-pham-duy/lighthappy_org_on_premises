@@ -1,0 +1,16 @@
+.intro{
+    background-color: aquamarine;
+    text-align: center;
+    padding: 30px;
+    font-size: 20x;
+}
+.merge{
+    background-color: blanchedalmond;
+    display: block;
+    text-align: center;
+    padding: 15px;    
+}
+.form-group{
+    align-content: center;
+    padding:5px;
+}

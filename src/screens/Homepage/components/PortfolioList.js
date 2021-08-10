@@ -16,7 +16,7 @@ function redirectAboutMe (event) {
 }
 
 function redirectToolPdf (event) {
-  redirectTo('tool-pdf')
+  redirectTo('pdf-tools')
 }
 
 function redirectRealTimeChatRoom (event) {

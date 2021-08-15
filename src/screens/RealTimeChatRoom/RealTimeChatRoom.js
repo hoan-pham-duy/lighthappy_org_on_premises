@@ -3,7 +3,6 @@ import history from './../../test/history'
 import ChatRoomTemplate from './components/ChatRoomTemplate'
 
 import Amplify, { Auth, API, graphqlOperation } from 'aws-amplify'
-import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 import awsconfig from './../../aws-exports'
 import * as mutations from './../../graphql/mutations'
 import * as queries from './../../graphql/queries'
@@ -17,16 +16,24 @@ const ROOM_NAME_DEFAULT = 'ROOM_DEFAULT'
 const USER_NAME_DEFAULT = 'Guess'
 
 class RealTimeChatRoom extends Component {
+  redirectToLogin (event) {
+    window.open('/signin', '_blank')
+  }
+
   handleInputChange (event) {
     console.log('Input is changed')
     this.setState({ messageToSend: event.target.value })
   }
 
   async getUserEmail () {
-    const email = await Auth.currentAuthenticatedUser().then(function (user) {
-      return user.attributes.email
-    })
-    return email
+    try {
+      const email = await Auth.currentAuthenticatedUser().then(function (user) {
+        return user.attributes.email
+      })
+      return email
+    } catch (error) {
+      return USER_NAME_DEFAULT
+    }
   }
 
   async handleButtonClick (event) {
@@ -68,6 +75,7 @@ class RealTimeChatRoom extends Component {
     this.handleButtonClick = this.handleButtonClick.bind(this)
     this.loadAllMessages = this.loadAllMessages.bind(this)
     this.getUserEmail = this.getUserEmail.bind(this)
+    this.redirectToLogin = this.redirectToLogin.bind(this)
   }
 
   state = {
@@ -93,7 +101,7 @@ class RealTimeChatRoom extends Component {
   render () {
     return (
       <div className="RealTimeChatRoom">
-        <AmplifySignOut />
+        <button onClick={this.redirectToLogin}>Click to SignIn/SignOut to Display your name in ChatRoom</button>
         <h1 className="Header">Realtime ChatRoom</h1>
         <h2 className="Greeting"> Hi, {this.state.currentUserName}</h2>
         <ChatRoomTemplate messageAll={this.state.messageAll} userId={this.state.currentUserName} />
@@ -107,4 +115,4 @@ class RealTimeChatRoom extends Component {
   }
 }
 
-export default withAuthenticator(RealTimeChatRoom)
+export default RealTimeChatRoom

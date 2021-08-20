@@ -101,7 +101,6 @@ class RealTimeChatRoom extends Component {
   render () {
     return (
       <div className="RealTimeChatRoom">
-        <button onClick={this.redirectToLogin}>Click to SignIn/SignOut to Display your name in ChatRoom</button>
         <h1 className="Header">Realtime ChatRoom</h1>
         <h2 className="Greeting"> Hi, {this.state.currentUserName}</h2>
         <ChatRoomTemplate messageAll={this.state.messageAll} userId={this.state.currentUserName} />
@@ -109,6 +108,7 @@ class RealTimeChatRoom extends Component {
           <input display="block" placeholder="Enter Message Here" onChange={this.handleInputChange}></input>
           <button onClick={this.handleButtonClick} id="SendAMessage"> Send A Message </button>
         </div>
+        <button onClick={this.redirectToLogin} className="sign-in">Click to SignIn/SignOut to Display your name in ChatRoom</button>
         <button onClick={history.goBack} id="BackToHomePage" > Back To Homepage</button>
       </div>
     )

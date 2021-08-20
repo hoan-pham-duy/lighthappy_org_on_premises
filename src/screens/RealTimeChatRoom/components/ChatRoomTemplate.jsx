@@ -10,7 +10,7 @@ function convertToDisplayMessage (remoteMessages, userId) {
     if (remoteMessage.user_name === userId) {
       message.ownedByCurrentUser = true
     }
-    message.body = remoteMessage.user_name + ':\t\t\t' + remoteMessage.content
+    message.body = remoteMessage.updatedAt.slice(0, remoteMessage.updatedAt.length - 5) + ':\t\t\t' + remoteMessage.user_name + ':\t\t\t' + remoteMessage.content
     messages.push(message)
   }
   return messages
@@ -18,6 +18,7 @@ function convertToDisplayMessage (remoteMessages, userId) {
 
 const ChatRoomTemplate = (props) => {
   const remoteMessages = props.messageAll
+  console.log('remoteMessages = ', remoteMessages)
   const messages = convertToDisplayMessage(remoteMessages, props.userId)
 
   return (

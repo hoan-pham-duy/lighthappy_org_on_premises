@@ -21,7 +21,6 @@ class SignIn extends Component {
         <AmplifySignOut />
         <button onClick={this.redirectToRealTimeChatRoom}> Comeback to Realtime ChatRoom</button>
       </div>
-
     )
   }
 }

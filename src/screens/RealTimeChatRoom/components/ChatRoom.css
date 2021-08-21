@@ -54,3 +54,7 @@
 .messages-container, .new-message-input-field, .send-message-button {
     border-color: #9a9a9a;
 }
+
+.sign-in {
+    background-color: orange !important;
+}

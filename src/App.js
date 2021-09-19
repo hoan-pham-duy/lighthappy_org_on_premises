@@ -7,6 +7,7 @@ import Homepage from './screens/Homepage/Homepage.js'
 import RealTimeChatRoom from './screens/RealTimeChatRoom/RealTimeChatRoom.js'
 import PdfTools from './screens/PdfTools/PdfTools.js'
 import SignIn from './screens/SignIn/SignIn.js'
+import TechnicalDetails from './screens/TechnicalDetails/TechnicalDetails'
 
 function App () {
   return (
@@ -16,6 +17,7 @@ function App () {
         <Route exact path="/real-time-chat-room" render={() => <RealTimeChatRoom />} />
         <Route exact path="/pdf-tools" render={() => <PdfTools />} />
         <Route exact path="/signin" render={() => <SignIn />} />
+        <Route exact path="/technical-details" render={() => <TechnicalDetails />} />
       </Switch>
     </BrowserRouter>
   )

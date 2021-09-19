@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.ts-container {
+}
+.ts-header {
+    width: 100%;
+    height: 185px;
+    background-color: #2C3E50;
+    color: #fff;
+    text-align: center;
+    line-height: 185px;
+}
+.ts-content {
+    width: 100%;
+    height: 839px;
+    background-color: #1ABC9C;
+}
+.ts-footer {
+    background-color: #2C3E50;
+    padding: 20px
+}
+.ts-buttonBack {
+    
+}

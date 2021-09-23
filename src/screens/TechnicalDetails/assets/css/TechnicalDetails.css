@@ -55,6 +55,12 @@
 
 }
 
+.ts-img-pipelines .ts-img {
+    padding: 50px 0px 0px 0px;
+}
+.ts-img-pr .ts-img {
+    padding: 0px 0px 0px 50px;
+}
 .ts-img {
     display:block;
     margin:auto;

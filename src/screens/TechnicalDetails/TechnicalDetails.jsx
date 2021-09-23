@@ -6,6 +6,7 @@ import './assets/css/TechnicalDetails.css'
 import ArchitectureImg from './assets/img/architecture.png'
 import JiraImg from './assets/img/jira.png'
 import BitbucketPipelinesImg from './assets/img/bitbucket-pipelines.png'
+import BitbucketPR from './assets/img/bitbucketPR.png'
 import AmplifyDeployImg from './assets/img/amplify-deployment.png'
 
 export default class TechnicalDetails extends Component {
@@ -99,8 +100,9 @@ export default class TechnicalDetails extends Component {
           <p className="ts-description">Figure 2. JIRA for Project Management</p>
         </div>
         <div className="ts-bitbucket-pipelines">
-          < img className="ts-img" src={BitbucketPipelinesImg} alt="bitbucket-pipelines" />
-          <p className="ts-description">Figure 3. Bitbucket Pipelines for continuous testing</p>
+          < img className="ts-img ts-img-pipelines" src={BitbucketPipelinesImg} alt="bitbucket-pipelines" />
+          < img className="ts-img ts-img-pr" src={BitbucketPR} alt="bitbucket-pr" />
+          <p className="ts-description">Figure 3. Bitbucket Pipelines for continuous testing and create Pull Request</p>
         </div>
         <div className="ts-amplify-deployment">
           < img className="ts-img" src={AmplifyDeployImg} alt="amplify-deployment" />

@@ -3,6 +3,7 @@ import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table'
 import history from '../../test/history'
 
 import './assets/css/TechnicalDetails.css'
+import ArchitectureImg from './assets/img/architecture.png'
 
 export default class TechnicalDetails extends Component {
   state = {
@@ -73,17 +74,26 @@ export default class TechnicalDetails extends Component {
   render () {
     return (
       <div className="ts-container">
-        <div className="ts-header">Technical Stack of HappyDev.tk</div>
+        <div className="ts-header">
+        <button className="ts-buttonBack" onClick={history.goBack}> Homepage</button>
+        <p className="ts-header-content">Technical Stack of HappyDev.tk</p>
+
+        </div>
+        <div className="ts-architecture">
+          < img className="ts-architecture-img" src={ ArchitectureImg } alt="architecture" />
+          <p className="ts-description">Figure 1. Architecture of Happy Personal Website</p>
+        </div>
         <div className="ts-content">
-        <BootstrapTable data={this.state.data}>
+        <BootstrapTable data={this.state.data} class="ts-table" striped bordered hover size="sm">
           <TableHeaderColumn dataField="usage" isKey>Usage</TableHeaderColumn>
           <TableHeaderColumn dataField="tools" >Tools</TableHeaderColumn>
           <TableHeaderColumn dataField="note">Note</TableHeaderColumn>
         </BootstrapTable>
+        <p className="ts-description">Table 1. Tech Stack of Happy Personal Website</p>
         </div>
-        <div className="ts-footer">
+        {/* <div className="ts-footer">
           <button className="ts-buttonBack" onClick={history.goBack}> Back To Homepage</button>
-        </div>
+        </div> */}
       </div>
     )
   }

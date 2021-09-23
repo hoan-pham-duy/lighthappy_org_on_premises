@@ -1,26 +1,69 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .ts-container {
 }
 .ts-header {
+    position: fixed;
+    font-size: 36px;
     width: 100%;
-    height: 185px;
+    height: 80px;
     background-color: #2C3E50;
     color: #fff;
     text-align: center;
-    line-height: 185px;
+    line-height: 80px;
+    z-index: 1;
+}
+
+.ts-header .ts-buttonBack {
+    float: left;
+    line-height: 50px;
+    margin: 15px;
+    color: white;
+    padding: 0px 5px 0px 5px;
+    background-color: #194572;
+}
+.ts-header .ts-header-content {
+    display: inline-block;
 }
 .ts-content {
     width: 100%;
-    height: 839px;
-    background-color: #1ABC9C;
+    /* height: 839px; */
+    background-color: #fff;
 }
+
+.ts-content .table-bordered thead th {
+}
+
+.ts-content .table td{
+    color: #000;
+}
+
+.ts-architecture {
+    position: relative;
+    background-color: #1abc9c;
+    padding: 285px 0px 50px 0;
+
+}
+
+.ts-architecture .ts-architecture-img {
+    display:block;
+    margin:auto;
+    padding: 50px 0px 50px 0px;
+    max-width:100%;
+    height:auto;
+}
+
+.ts-description {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
 .ts-footer {
     background-color: #2C3E50;
     padding: 20px
-}
-.ts-buttonBack {
-    
 }

@@ -4,6 +4,9 @@ import history from '../../test/history'
 
 import './assets/css/TechnicalDetails.css'
 import ArchitectureImg from './assets/img/architecture.png'
+import JiraImg from './assets/img/jira.png'
+import BitbucketPipelinesImg from './assets/img/bitbucket-pipelines.png'
+import AmplifyDeployImg from './assets/img/amplify-deployment.png'
 
 export default class TechnicalDetails extends Component {
   state = {
@@ -75,25 +78,34 @@ export default class TechnicalDetails extends Component {
     return (
       <div className="ts-container">
         <div className="ts-header">
-        <button className="ts-buttonBack" onClick={history.goBack}> Homepage</button>
-        <p className="ts-header-content">Technical Stack of HappyDev.tk</p>
+          <button className="ts-buttonBack" onClick={history.goBack}> Homepage</button>
+          <p className="ts-header-content">Technical Stack of HappyDev.tk</p>
 
         </div>
         <div className="ts-architecture">
-          < img className="ts-architecture-img" src={ ArchitectureImg } alt="architecture" />
+          < img className="ts-img" src={ArchitectureImg} alt="architecture" />
           <p className="ts-description">Figure 1. Architecture of Happy Personal Website</p>
         </div>
         <div className="ts-content">
-        <BootstrapTable data={this.state.data} class="ts-table" striped bordered hover size="sm">
-          <TableHeaderColumn dataField="usage" isKey>Usage</TableHeaderColumn>
-          <TableHeaderColumn dataField="tools" >Tools</TableHeaderColumn>
-          <TableHeaderColumn dataField="note">Note</TableHeaderColumn>
-        </BootstrapTable>
-        <p className="ts-description">Table 1. Tech Stack of Happy Personal Website</p>
+          <BootstrapTable data={this.state.data} class="ts-table" striped bordered hover size="sm">
+            <TableHeaderColumn dataField="usage" isKey>Usage</TableHeaderColumn>
+            <TableHeaderColumn dataField="tools" >Tools</TableHeaderColumn>
+            <TableHeaderColumn dataField="note">Note</TableHeaderColumn>
+          </BootstrapTable>
+          <p className="ts-description">Table 1. Tech Stack of Happy Personal Website</p>
         </div>
-        {/* <div className="ts-footer">
-          <button className="ts-buttonBack" onClick={history.goBack}> Back To Homepage</button>
-        </div> */}
+        <div className="ts-jira">
+          < img className="ts-img" src={JiraImg} alt="jira" />
+          <p className="ts-description">Figure 2. JIRA for Project Management</p>
+        </div>
+        <div className="ts-bitbucket-pipelines">
+          < img className="ts-img" src={BitbucketPipelinesImg} alt="bitbucket-pipelines" />
+          <p className="ts-description">Figure 3. Bitbucket Pipelines for continuous testing</p>
+        </div>
+        <div className="ts-amplify-deployment">
+          < img className="ts-img" src={AmplifyDeployImg} alt="amplify-deployment" />
+          <p className="ts-description">Figure 4. Amplify Deployment with 3 environment: develop, staging, production</p>
+        </div>
       </div>
     )
   }

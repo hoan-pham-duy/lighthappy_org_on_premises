@@ -28,10 +28,11 @@
 .ts-header .ts-header-content {
     display: inline-block;
 }
-.ts-content {
+.ts-content, .ts-bitbucket-pipelines{
     width: 100%;
     /* height: 839px; */
     background-color: #fff;
+    padding: 285px 0px 50px 0;
 }
 
 .ts-content .table-bordered thead th {
@@ -48,11 +49,17 @@
 
 }
 
-.ts-architecture .ts-architecture-img {
+.ts-jira, .ts-amplify-deployment {
+    background-color: #1abc9c;
+    padding: 285px 0px 50px 0;
+
+}
+
+.ts-img {
     display:block;
     margin:auto;
     padding: 50px 0px 50px 0px;
-    max-width:100%;
+    max-width:70%;
     height:auto;
 }
 

@@ -19,7 +19,7 @@ class About extends React.Component {
               <div className='divider-custom-line' />
             </div>
             {/* About Section Content */}
-            <div text-algin='center'>
+            <div style={ { 'text-align': 'center' } }>
 
               <div>Currently, I am working in a Healthcare Startup with multiple roles: <br />
                 - R&D Engineer in Signal Processing with C/MATLAB<br />

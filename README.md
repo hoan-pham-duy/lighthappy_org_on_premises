@@ -117,30 +117,16 @@ Install and configure Amplify CLI at <a> https://docs.amplify.aws/cli/start/inst
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+1. Install and configure Amplify CLI at <a> https://docs.amplify.aws/cli/start/install/ </a> 
 
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Click to the projects we want to use in "My Projects" in <a> https://lighthappy.tk </a>
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -149,13 +135,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
+<!-- - [x] Add Changelog
 - [x] Add back to top links
 - [ ] Add Additional Templates w/ Examples
 - [ ] Add "components" document to easily copy & paste sections of the readme
 - [ ] Multi-language Support
     - [ ] Chinese
-    - [ ] Spanish
+    - [ ] Spanish -->
 
 See the [open issues](https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/graphs/issues) for a full list of proposed features (and known issues).
 
@@ -193,9 +179,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Pham Duy Hoan - [@hoan.pham.duy.1](https://fb.com/hoan.pham.duy.1) - phamduyhoan95@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/hoan-pham-duy/lighthappy_tk_aws_amlify](https://github.com/hoan-pham-duy/lighthappy_tk_aws_amlify)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -206,14 +192,8 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+* [Best README Template](https://github.com/othneildrew/Best-README-Template)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -240,5 +220,3 @@ Use this space to list resources you find helpful and would like to give credit 
 
 [AWSAmplify]: https://img.shields.io/badge/AWS-Amplify-FFB266?style=for-the-badge&logoColor=FFB266
 [AWSAmplify-url]: https://aws.amazon.com/amplify/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/

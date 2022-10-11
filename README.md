@@ -106,16 +106,12 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To built the website with core feature, inside Amplify framework, you only need to go to AWS Amplify in the console -> new app -> host a web app -> import the git repository </br>
+Refer to: <a> https://www.youtube.com/watch?v=DHLZAzdT44Y </a>
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Install and configure Amplify CLI at <a> https://docs.amplify.aws/cli/start/install/ </a>
 
 ### Installation
 

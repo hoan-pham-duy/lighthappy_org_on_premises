@@ -5,7 +5,7 @@ import 'axios-progress-bar/dist/nprogress.css'
 import history from './../../test/history'
 import './css/PdfTools.css'
 
-const PDF_TOOLS_URL = 'https://r65qoto7x5.execute-api.ap-southeast-1.amazonaws.com/dev'
+const PDF_TOOLS_URL = 'https://r65qoto7x5.execute-api.ap-southeast-1.amazonaws.com/dev/mergepdf'
 
 export default class FilesUploadComponent extends Component {
   componentDidMount () {

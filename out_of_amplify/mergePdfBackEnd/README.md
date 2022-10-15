@@ -43,5 +43,5 @@ Find another arns for other packages if needed:
 Refer at: https://github.com/keithrozario/Klayers
 
 Go to API Gateway -> choose `${project_name}-${env_name}` -> Choose Stage -> Copy the Invoke URL
--> Paste the Invoke URL to 
-`const PDF_TOOLS_URL = 'the-invoke-url'`
+-> Paste the `${invoke_URL}/mergepdf` to 
+`const PDF_TOOLS_URL = '${invoke_URL}/mergepdf`

@@ -5,6 +5,8 @@ import 'axios-progress-bar/dist/nprogress.css'
 import history from './../../test/history'
 import './css/PdfTools.css'
 
+const PDF_TOOLS_URL = 'https://r65qoto7x5.execute-api.ap-southeast-1.amazonaws.com/dev'
+
 export default class FilesUploadComponent extends Component {
   componentDidMount () {
     loadProgressBar()
@@ -32,7 +34,7 @@ export default class FilesUploadComponent extends Component {
     for (const key of Object.keys(this.state.imgCollection)) {
       formData.append(key, this.state.imgCollection[key])
     }
-    axios.post('https://udg00xc92l.execute-api.ap-southeast-1.amazonaws.com/production/mergepdf', formData, { responseType: 'arraybuffer', mode: 'cors' })
+    axios.post(PDF_TOOLS_URL, formData, { responseType: 'arraybuffer', mode: 'cors' })
       .then(response => {
         console.log('respose from axios = ', response)
         const blob = new Blob([response.data], { type: 'application/pdf' })

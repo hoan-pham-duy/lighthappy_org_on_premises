@@ -5,7 +5,7 @@ import 'axios-progress-bar/dist/nprogress.css'
 import history from './../../test/history'
 import './css/PdfTools.css'
 
-const PDF_TOOLS_URL = process.env.PDF_TOOLS_URL
+const PDF_TOOLS_URL = process.env.REACT_APP_PDF_TOOLS_URL
 
 export default class FilesUploadComponent extends Component {
   componentDidMount () {

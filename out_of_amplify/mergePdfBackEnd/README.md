@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://lighthappy.tk">
-    <img src="./images/logo.png" alt="Logo" width="80" height="80">
+    <img src="./images/ToolPdf.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">LightHappy.tk</h3>

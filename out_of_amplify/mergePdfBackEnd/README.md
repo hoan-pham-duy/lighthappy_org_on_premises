@@ -13,67 +13,18 @@
   <h3 align="center">LightHappy.tk</h3>
 
   <p align="center">
-    Pham Duy Hoan's personal website with multiple applcations, deploy in AWS: merge pdf, generate substitles, ...
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://lighthappy.tk">View Demo</a>
-    ·
-    <a href="https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/issues">Request Feature</a>
+    Tools with pdf websites like merge pdfs, .... 
   </p>
 </div>
 
-
-
 <!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
-
-
 <!-- ABOUT THE PROJECT -->
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://lighthappy.tk)
-
-Hoan is as a software engineer who is keen on developing technical products, especially using AWS to reduce effort to develop and maintain.</br>
-<br>
-Hoan develops this personal project that contains multiple his applications like tools to send to his friends and his familiy as well as to summary his knowledge, develop mostly in AWS Amplify Framework. </br>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+Built with Zappa to makes it super easy to build and deploy server-less, event-driven Python applications (including, but not limited to, WSGI web apps) on AWS Lambda + API Gateway. 
 
-* [![React][React.js]][React-url]
-* [![AWSAmplify][AWSAmplify]][AWSAmplify-url]
-
+* [![Zappa][Zappa]][Zappa-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -81,23 +32,81 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-To built the website with core feature, inside Amplify framework, you only need to go to AWS Amplify in the console -> new app -> host a web app -> import the git repository </br>
-Refer to: <a> https://www.youtube.com/watch?v=DHLZAzdT44Y </a>
+To create a backend that include all the pdf tools features, please follow these steps:
 
 ### Prerequisites
-
-Install and configure Amplify CLI at <a> https://docs.amplify.aws/cli/start/install/ </a>
+A machine that installed Python with AWS CLI. (Tested with Ubuntu 18.04, python3.8, AWS CLI v2)
 
 ### Installation
+1. Install Zappa
+```
+python3 -m pip install zappa
+```
+2. Install virtual environement
+```
+python3 -m pip install virtualenv
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+virtualenv -p python3 env
 
-1. Install and configure Amplify CLI at <a> https://docs.amplify.aws/cli/start/install/ </a> 
-2. Install application outside Amplfiy.
+source env/bin/activate
+```
+3. Update Zappa_setting.json:
+```json
+[
+    {
+        "${env_name}": {
+        "app_function": "my_app.app",
+        "aws_region": "${aws_region}}",
+        "profile_name": "default",
+        "project_name": "mergepdf",
+        "runtime": "python3.8",
+        "s3_bucket": "zappa-mergepdf-lighthappy-aws-amplify"
+    }
+    }
+]
+```
+4. Deploy to AWS
+```shell
+zappa deploy <env_name>  (in zappa_settings.json)
+```
 
+example:
+```shell
+    zappa deploy production
+```
+The Lambda Function and API Gateway will be named as: `${project_name}-${env_name}`
+<br />
+Note:
+In the case the command is failed at the first time, should do it again.
+<br /> If we deployed the app, run this command:
 
+```shell
+zappa update <env_name>
+```
+example:
+```shell
+  zappa update production
+```
 
+5. Go to Lambda Function named as `${project_name}-${env_name}`, Add a Lambda Layer (depend on the region)
+Check the ARN of Lambda Layer <a href='https://github.com/shelfio/ghostscript-lambda-layer'> here </a>
+example:
+```
+  arn:aws:lambda:ap-southeast-1:764866452798:layer:ghostscript:8
+```
+
+Find another arns for other packages if needed:
+Refer: <a href='https://github.com/keithrozario/Klayers'> here </a>
+
+6. Go to APIGateway, choose the API Gateway named as `${project_name}-${env_name}` 
+then enable the CORS as guide <a href='https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-cors-console.html'> here </a>
+
+Choose Stage -> Copy the Invoke URL
+-> Paste the `${invoke_URL}/mergepdf` to environment of the application.
+For example, in the .env.local file of root folder of react app:
+```
+REACT_APP_PDF_TOOLS_URL=`${invoke_URL}/mergepdf`
+```
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -107,52 +116,12 @@ Click to the projects we want to use in "My Projects" in <a> https://lighthappy.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-<!-- - [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish -->
-
-See the [open issues](https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/graphs/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
 ## Contact
 
@@ -178,8 +147,6 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/graphs/contributors/
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
 [forks-url]: https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/graphs/network/members
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
@@ -190,58 +157,6 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-url]: https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/graphs/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/pham-duy-hoan-10a68b13a/ 
-[product-screenshot]: images/lighthappy_project.png
 
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-
-[AWSAmplify]: https://img.shields.io/badge/AWS-Amplify-FFB266?style=for-the-badge&logoColor=FFB266
-[AWSAmplify-url]: https://aws.amazon.com/amplify/
-
-Install with Zappa
-
-python3 -m pip install virtualenv
-
-virtualenv -p python3 env
-
-source env/bin/activate
-
-python3 -m pip install -r requirements.txt
-
-Update Zappa_setting.json:
-[
-    {
-        "${env_name}": {
-        "app_function": "my_app.app",
-        "aws_region": "${aws_region}}",
-        "profile_name": "default",
-        "project_name": "mergepdf",
-        "runtime": "python3.8",
-        "s3_bucket": "zappa-mergepdf-lighthappy-aws-amplify"
-    }
-    }
-]
-
-zappa deploy <env_name>  (in zappa_settings.json)
-example:
-    zappa deploy production
-
-(Can failed at the first time, should do it again)
-
-The Lambda Function and API Gateway will be named as: `${project_name}-${env_name}`
-
-If deployed -> zappa update <env_name>
-    zappa update production
-
-Need go to APIGateway -> Enable CORS
-
-Need go to Lambda Function, Add a Lambda Layer (depend on the region)
-https://github.com/shelfio/ghostscript-lambda-layer
-        arn:aws:lambda:ap-southeast-1:764866452798:layer:ghostscript:8
-
-Find another arns for other packages if needed:
-Refer at: https://github.com/keithrozario/Klayers
-
-Go to API Gateway -> choose `${project_name}-${env_name}` -> Choose Stage -> Copy the Invoke URL
--> Paste the `${invoke_URL}/mergepdf` to 
-`const PDF_TOOLS_URL = '${invoke_URL}/mergepdf`
+[Zappa]: https://img.shields.io/badge/Zappa-FFB266?style=for-the-badge&logoColor=FFB266
+[Zappa-url]: https://github.com/zappa/Zappa

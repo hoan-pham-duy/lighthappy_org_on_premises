@@ -118,6 +118,7 @@ Install and configure Amplify CLI at <a> https://docs.amplify.aws/cli/start/inst
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Install and configure Amplify CLI at <a> https://docs.amplify.aws/cli/start/install/ </a> 
+2. Install application outside Amplfiy.
 
 
 

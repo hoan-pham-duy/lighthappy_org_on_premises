@@ -30,14 +30,15 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://lighthappy.tk">
+  <a href="https://lighthappy.tk/pdf-tools">
     <img src="./images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">LightHappy.tk</h3>
+  <h3 align="center">LightHappy.tk/pdf-tools</h3>
 
   <p align="center">
-    Pham Duy Hoan's personal website with multiple applcations, deploy in AWS: merge pdf, generate substitles, ...
+    Provide PDF Tools like: <br/>
+    - Merge PDFs
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />

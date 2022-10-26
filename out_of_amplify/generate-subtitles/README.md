@@ -30,15 +30,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://lighthappy.tk/pdf-tools">
+  <a href="https://lighthappy.tk/generate_subtitles">
     <img src="./images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">LightHappy.tk/pdf-tools</h3>
+  <h3 align="center">LightHappy.tk/generate_subtitles</h3>
 
   <p align="center">
-    Provide PDF Tools like: <br/>
-    - Merge PDFs
+    Provide Generate Subtitles Tool that can generate substiles from videos / audios
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
@@ -86,18 +85,17 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://lighthappy.tk)
 
-Hoan is as a software engineer who is keen on developing technical products, especially using AWS to reduce effort to develop and maintain.</br>
-<br>
-Hoan develops this personal project that contains multiple his applications like tools to send to his friends and his familiy as well as to summary his knowledge, develop mostly in AWS Amplify Framework. </br>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [![React][React.js]][React-url]
-* [![AWSAmplify][AWSAmplify]][AWSAmplify-url]
+<ul>
+  <li><a href="https://nodejs.org/en/"> Nodejs </a></li>
+  <li><a href="https://expressjs.com/"> Express </a></li>
+  <li><a href="https://github.com/agermanidis/autosub"> Autosub </a></li>
+</ul>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -126,7 +124,8 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Click to the projects we want to use in "My Projects" in <a> https://lighthappy.tk </a>
+Click to "Generate Substitles" project we want to use in "My Projects" in <a> https://lighthappy.tk </a> <br/>
+or go to <a href="https://lighthappy.tk/generate-subtitles"> https://lighthappy.tk/generate-subtitles </a>
 
 <!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 

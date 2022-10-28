@@ -1,15 +1,20 @@
-FROM ubuntu:18.04
+#
+# RUN by:
+# cp Dockerfile-Ubuntu-Container Dockerfile
+# sudo docker build -t generate-subtitles .
+# 
+FROM ubuntu:22.04
 
 MAINTAINER Hoan&lt;phamduyhoan95@gmail.com&gt;
 
-RUN apt-get update && apt-get upgrade
+RUN apt-get -y update && apt-get -y upgrade
 RUN apt-get install -y nodejs
+RUN apt-get install -y npm
 
+ADD . / generate-subtitles/
+RUN (cd generate-subtitles/; npm install;)
+CMD (cd generate-subtitles/; npm start;)
 
-ADD ./generate-subtitles /generate-subtitles/
-
-RUN npm install
-
-RUN npm start
+# ENTRYPOINT [ "/bin/bash" ]
 
 EXPOSE 3000

@@ -1,0 +1,15 @@
+FROM ubuntu:18.04
+
+MAINTAINER Hoan&lt;phamduyhoan95@gmail.com&gt;
+
+RUN apt-get update && apt-get upgrade
+RUN apt-get install -y nodejs
+
+
+ADD ./generate-subtitles /generate-subtitles/
+
+RUN npm install
+
+RUN npm start
+
+EXPOSE 3000

@@ -1,7 +1,8 @@
 #
-# RUN by:
+# RUN by these command:
 # cp Dockerfile-Ubuntu-Container Dockerfile
-# sudo docker build -t generate-subtitles .
+# docker build -t generate-subtitles .
+# docker run -it -p 3000:3000 generate-subtitles
 # 
 FROM ubuntu:18.04
 

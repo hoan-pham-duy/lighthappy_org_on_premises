@@ -1,0 +1,39 @@
+#
+# RUN by these command:
+# cp Dockerfile-Ubuntu-Container Dockerfile
+# docker build -t generate-subtitles .
+# docker run -it -p 3000:3000 generate-subtitles
+# 
+FROM ubuntu:18.04
+
+MAINTAINER Hoan&lt;phamduyhoan95@gmail.com&gt;
+
+RUN apt-get -y update && apt-get -y upgrade
+RUN apt-get install -y nodejs
+RUN apt-get install -y npm
+
+# RUN apt-get update && apt-get install -y \
+#         software-properties-common
+# RUN add-apt-repository ppa:deadsnakes/ppa
+# RUN apt-get update && apt-get install -y \
+#     python3.8 \
+#     python3-pip
+# RUN python3.8 -m pip install pip
+# RUN apt-get update && apt-get install -y \
+#     python3-distutils \
+#     python3-setuptools
+# RUN python3.8 -m pip install pip --upgrade pip
+RUN apt-get install -y ffmpeg
+RUN apt-get install -y curl
+RUN curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py # Fetch get-pip.py for python 2.7 
+RUN python2 get-pip.py
+RUN pip --version
+RUN pip install autosub
+
+ADD . / generate-subtitles/
+RUN (cd generate-subtitles/; npm install;)
+CMD (cd generate-subtitles/; npm start;)
+
+# ENTRYPOINT [ "/bin/bash" ]
+
+EXPOSE 3000

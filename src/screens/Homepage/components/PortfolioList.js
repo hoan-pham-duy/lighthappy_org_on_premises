@@ -23,10 +23,15 @@ function redirectRealTimeChatRoom (event) {
   redirectTo('real-time-chat-room')
 }
 
+const emptyVeritcalDivStyle = {
+  height: '20px'
+}
+
 class PortfolioList extends React.Component {
   render () {
     return (
       <section className='page-section portfolio' id='portfolio'>
+      <div style={emptyVeritcalDivStyle}></div>
       <div className='container'>
         {/* Portfolio Section Heading */}
         <h2 className='page-section-heading text-center text-uppercase text-secondary mb-0'>My Projects</h2>

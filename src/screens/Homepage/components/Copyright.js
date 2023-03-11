@@ -5,7 +5,7 @@ class Copyright extends React.Component {
     return (
       <div>
         <div className='copyright py-4 text-center text-white'>
-          <div className='container'><small>Copyright © 2021</small></div>
+          <div className='container'><small>Copyright © 2023</small></div>
         </div>
       </div>
 

@@ -22,7 +22,7 @@ class WideSectionHeader extends React.Component {
           <div className='divider-custom-line' />
         </div>
         {/* Masthead Subheading */}
-        <p className='masthead-subheading font-weight-light mb-0'>Software, Signal Processing, AWS DevOps Engineer</p>
+        <p className='masthead-subheading font-weight-light mb-0'>AWS / Solution Architect / Backend / DevOps / Head of Software</p>
       </div>
     </header>
     )

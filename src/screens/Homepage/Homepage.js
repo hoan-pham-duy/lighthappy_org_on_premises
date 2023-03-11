@@ -10,7 +10,7 @@ import PortfolioList from './components/PortfolioList'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import Copyright from './components/Copyritgh'
+import Copyright from './components/Copyright'
 
 const createReactClass = require('create-react-class')
 

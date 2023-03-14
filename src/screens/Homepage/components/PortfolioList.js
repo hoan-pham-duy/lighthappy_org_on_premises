@@ -7,6 +7,7 @@ import AboutMeImg from '../assets/img/portfolio/AboutMe.png'
 import ToolPdfImg from '../assets/img/portfolio/ToolPdf.png'
 import RealTimeChatRoomImg from '../assets/img/portfolio/ChatRoom.png'
 import HowIBuildImg from '../assets/img/portfolio/How_I_build.png'
+import Book from '../assets/img/portfolio/Book.png'
 
 function redirectTo (path) {
   window.location.href = path
@@ -26,6 +27,13 @@ function redirectRealTimeChatRoom (event) {
 
 function redirectTechnicalDetails (event) {
   redirectTo('technical-details')
+}
+
+function redirectHappyTechnicalBook (event) {
+  window.open(
+    'https://techbook.lighthappy.org/',
+    '_blank' // <- This is what makes it open in a new window.
+  )
 }
 
 const imgPortfolioStyles = {
@@ -93,6 +101,15 @@ class PortfolioList extends React.Component {
               </div>
               <img style={imgPortfolioStyles} className='img-fluid' src={HowIBuildImg} alt='' />
               <p className='text-center'> How I develop this project </p>
+            </div>
+          </div>
+          <div className='col-md-6 col-lg-4 mb-5' onClick={redirectHappyTechnicalBook}>
+            <div className='portfolio-item mx-auto' data-toggle='modal' data-target='#portfolioModal2'>
+              <div className='portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100'>
+                <div className='portfolio-item-caption-content text-center text-white'><i className='fas fa-plus fa-3x' /></div>
+              </div>
+              <img style={imgPortfolioStyles} className='img-fluid' src={Book} alt='' />
+              <p className='text-center'> My Technical Notes </p>
             </div>
           </div>
           {/* <div>

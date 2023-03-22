@@ -1,4 +1,4 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/graphs/pull/73 -->
+<!-- Improved compatibility of back to top link: See: https://github.com/hoan-pham-duy/lighthappy.org_aws_amlify/graphs/pull/73 -->
 <a name="readme-top"></a>
 
 [![MIT License][license-shield]][license-url]
@@ -6,11 +6,11 @@
 
 <br />
 <div align="center">
-  <a href="https://lighthappy.tk">
+  <a href="https://lighthappy.org">
     <img src="./images/ToolPdf.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">LightHappy.tk</h3>
+  <h3 align="center">lighthappy.org</h3>
 
   <p align="center">
     Tools with pdf websites like merge pdfs, .... 
@@ -110,7 +110,7 @@ REACT_APP_PDF_TOOLS_URL=`${invoke_URL}/mergepdf`
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Click to the projects we want to use in "My Projects" in <a> https://lighthappy.tk </a>
+Click to the projects we want to use in "My Projects" in <a> https://lighthappy.org </a>
 
 <!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
@@ -148,13 +148,13 @@ Use this space to list resources you find helpful and would like to give credit 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/graphs/network/members
+[forks-url]: https://github.com/hoan-pham-duy/lighthappy.org_aws_amlify/graphs/network/members
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/graphs/stargazers
+[stars-url]: https://github.com/hoan-pham-duy/lighthappy.org_aws_amlify/graphs/stargazers
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/graphs/issues
+[issues-url]: https://github.com/hoan-pham-duy/lighthappy.org_aws_amlify/graphs/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/graphs/blob/master/LICENSE.txt
+[license-url]: https://github.com/hoan-pham-duy/lighthappy.org_aws_amlify/graphs/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/pham-duy-hoan-10a68b13a/ 
 

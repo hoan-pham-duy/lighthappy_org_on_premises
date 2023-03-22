@@ -1,4 +1,4 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/graphs/pull/73 -->
+<!-- Improved compatibility of back to top link: See: https://github.com/hoan-pham-duy/lighthappy.org_aws_amlify/graphs/pull/73 -->
 <a name="readme-top"></a>
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
@@ -30,11 +30,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://lighthappy.tk/generate_subtitles">
+  <a href="https://lighthappy.org/generate_subtitles">
     <img src="./images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">LightHappy.tk/generate_subtitles</h3>
+  <h3 align="center">lighthappy.org/generate_subtitles</h3>
 
   <p align="center">
     Provide Generate Subtitles Tool that can generate substiles from videos / audios
@@ -42,11 +42,11 @@
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://lighthappy.tk">View Demo</a>
+    <a href="https://lighthappy.org">View Demo</a>
     ·
-    <a href="https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/issues">Report Bug</a>
+    <a href="https://github.com/hoan-pham-duy/lighthappy.org_aws_amlify/issues">Report Bug</a>
     ·
-    <a href="https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/issues">Request Feature</a>
+    <a href="https://github.com/hoan-pham-duy/lighthappy.org_aws_amlify/issues">Request Feature</a>
   </p>
 </div>
 
@@ -83,7 +83,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://lighthappy.tk)
+[![Product Name Screen Shot][product-screenshot]](https://lighthappy.org)
 
 
 
@@ -124,8 +124,8 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Click to "Generate Substitles" project we want to use in "My Projects" in <a> https://lighthappy.tk </a> <br/>
-or go to <a href="https://lighthappy.tk/generate-subtitles"> https://lighthappy.tk/generate-subtitles </a>
+Click to "Generate Substitles" project we want to use in "My Projects" in <a> https://lighthappy.org </a> <br/>
+or go to <a href="https://lighthappy.org/generate-subtitles"> https://lighthappy.org/generate-subtitles </a>
 
 <!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
@@ -144,7 +144,7 @@ or go to <a href="https://lighthappy.tk/generate-subtitles"> https://lighthappy.
     - [ ] Chinese
     - [ ] Spanish -->
 
-See the [open issues](https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/graphs/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/hoan-pham-duy/lighthappy.org_aws_amlify/graphs/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -203,15 +203,15 @@ Use this space to list resources you find helpful and would like to give credit 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/graphs/contributors/
+[contributors-url]: https://github.com/hoan-pham-duy/lighthappy.org_aws_amlify/graphs/contributors/
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/graphs/network/members
+[forks-url]: https://github.com/hoan-pham-duy/lighthappy.org_aws_amlify/graphs/network/members
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/graphs/stargazers
+[stars-url]: https://github.com/hoan-pham-duy/lighthappy.org_aws_amlify/graphs/stargazers
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/graphs/issues
+[issues-url]: https://github.com/hoan-pham-duy/lighthappy.org_aws_amlify/graphs/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/hoan-pham-duy/lighthappy.tk_aws_amlify/graphs/blob/master/LICENSE.txt
+[license-url]: https://github.com/hoan-pham-duy/lighthappy.org_aws_amlify/graphs/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/pham-duy-hoan-10a68b13a/ 
 [product-screenshot]: images/lighthappy_project.png

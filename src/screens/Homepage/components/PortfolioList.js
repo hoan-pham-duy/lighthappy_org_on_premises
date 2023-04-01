@@ -9,6 +9,7 @@ import RealTimeChatRoomImg from '../assets/img/portfolio/ChatRoom.png'
 import HowIBuildImg from '../assets/img/portfolio/How_I_build.png'
 import Book from '../assets/img/portfolio/Book.png'
 import LH_NFT from '../assets/img/portfolio/LH_NFT.jpeg'
+import LH_MEMORIES from '../assets/img/portfolio/LH_Memories.png'
 
 function redirectTo (path) {
   window.location.href = path
@@ -39,7 +40,14 @@ function redirectHappyTechnicalBook (event) {
 
 function redirectLhNft (event) {
   window.open(
-    'https://sepolia.nft.lighthappy.org/',
+    'https://sepolia.nft.lighthappy.org/fire-guys',
+    '_blank' // <- This is what makes it open in a new window.
+  )
+}
+
+function redirectLhMemoriesBlk (event) {
+  window.open(
+    'https://sepolia.nft.lighthappy.org/lh-memories',
     '_blank' // <- This is what makes it open in a new window.
   )
 }
@@ -126,7 +134,19 @@ class PortfolioList extends React.Component {
                 <div className='portfolio-item-caption-content text-center text-white'><i className='fas fa-plus fa-3x' /></div>
               </div>
               <img style={imgPortfolioStyles} className='img-fluid' src={LH_NFT} alt='' />
-              <p className='text-center'> Use AWS CICD to deploy ETH Solidity project to Sepolia TestNet</p>
+              <p className='text-center'> Use AWS CICD to deploy an sample NFT Solidity project to Sepolia TestNet <br/>
+                  Refer Solidity source code from <a href='https://github.com/fireship-io/web3-nft-dapp-tutorial'> this repo </a>
+                </p>
+            </div>
+          </div>
+         <div className='col-md-6 col-lg-4 mb-5' onClick={redirectLhMemoriesBlk}>
+            <div className='portfolio-item mx-auto' data-toggle='modal' data-target='#portfolioModal2'>
+              <div className='portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100'>
+                <div className='portfolio-item-caption-content text-center text-white'><i className='fas fa-plus fa-3x' /></div>
+              </div>
+              <img style={imgPortfolioStyles} className='img-fluid' src={LH_MEMORIES} alt='' />
+              <p className='text-center'> Use AWS CICD to deploy my own smart contract call: Light Happy Memory, that allows users save their memories in blockchain.<br/>
+              Current, the app is deployed in Sepolia ETH Network</p>
             </div>
           </div>
           {/* <div>

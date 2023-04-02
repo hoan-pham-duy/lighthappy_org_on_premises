@@ -8,7 +8,7 @@ import ToolPdfImg from '../assets/img/portfolio/ToolPdf.png'
 import RealTimeChatRoomImg from '../assets/img/portfolio/ChatRoom.png'
 import HowIBuildImg from '../assets/img/portfolio/How_I_build.png'
 import Book from '../assets/img/portfolio/Book.png'
-import LH_NFT from '../assets/img/portfolio/LH_NFT.jpeg'
+import LH_NFT from '../assets/img/portfolio/LH_NFT.png'
 import LH_MEMORIES from '../assets/img/portfolio/LH_Memories.png'
 
 function redirectTo (path) {

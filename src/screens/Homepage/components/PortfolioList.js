@@ -67,8 +67,8 @@ const emptyVeritcalDivStyle = {
 class PortfolioList extends React.Component {
   render () {
     return (
-      <section className='page-section portfolio' id='portfolio'>
-      <div className='container'>
+      <section className='page-section portfolio' id='portfolio' style={{ backgroundColor: '#ffffff' }}>
+      <div className='container' >
         {/* Portfolio Section Heading */}
         <div style={emptyVeritcalDivStyle}> </div>
         <h2 className='page-section-heading text-center text-uppercase text-secondary mb-0'>My Projects</h2>
@@ -87,7 +87,7 @@ class PortfolioList extends React.Component {
                 <div className='portfolio-item-caption-content text-center text-white'><i className='fas fa-plus fa-3x' /></div>
               </div>
               <img style={imgPortfolioStyles} className='img-fluid' src={AboutMeImg} alt='' />
-              <p className='text-center'> About Me </p>
+              <p className='text-center'> My Resume </p>
             </div>
           </div>
           {/* Portfolio Item 2 */}

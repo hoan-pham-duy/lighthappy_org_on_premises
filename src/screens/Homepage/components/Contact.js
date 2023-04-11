@@ -14,7 +14,7 @@ function redirectMail (event) {
 class Contact extends React.Component {
   render () {
     return (
-      <div onClick={redirectMail} target="_blank" rel="noopener noreferrer">
+      <div onClick={redirectMail} target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#ffffff' }}>
         <section className='page-section' id='contact'>
           <div className='container'>
             <h2 className='page-section-heading text-center text-uppercase'>Contact Me</h2>

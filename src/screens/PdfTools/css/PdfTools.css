@@ -1,11 +1,11 @@
 .intro{
-    background-color: aquamarine;
+    background-color: #ffffff;
     text-align: center;
-    padding: 30px;
-    font-size: 20x;
+    font-size: 20px;
+    color: #2b689c;
 }
 .merge{
-    background-color: blanchedalmond;
+    background-color: #b8b8b8;
     display: block;
     text-align: center;
     padding: 15px;    

@@ -7,6 +7,12 @@ import './css/PdfTools.css'
 
 const PDF_TOOLS_URL = process.env.REACT_APP_PDF_TOOLS_URL
 
+const styleButtonBackHomepage = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
+}
+
 export default class FilesUploadComponent extends Component {
   componentDidMount () {
     loadProgressBar()
@@ -48,7 +54,7 @@ export default class FilesUploadComponent extends Component {
 
   render () {
     return (
-      <div className="container">
+      <div style={{ background: '#ffffff', padding: 20 }}>
         <h1 className="intro"> Merge Your PDF Files - As a gift for Light </h1>
         <div className="row merge">
           <form onSubmit={this.onSubmit}>
@@ -60,7 +66,9 @@ export default class FilesUploadComponent extends Component {
             </div>
           </form>
         </div>
-        <button onClick={history.goBack}> Back To Homepage</button>
+        <div style={{ padding: 10 }}>
+          <button onClick={history.goBack} style={ styleButtonBackHomepage }> Back To Homepage</button>
+        </div>
       </div>
     )
   }
